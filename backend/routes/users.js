@@ -17,17 +17,6 @@ router.post("/signup", async (req, res) => {
     });
 
     res.json({ message: "User created successfully", user: newUser });
-
-    // // Call AWS API Gateway if choice is true
-    // if (choice) {
-    //   const apiGatewayUrl = "https://r6kroxk7g5.execute-api.us-east-1.amazonaws.com/prod/lambda"; 
-    //   const data = {arn:"arn:aws:sns:us-east-1:426085379010:DailyNotification", emailAddress: email }; 
-
-    //   // Make HTTP POST request to API Gateway
-    //   axios.post(apiGatewayUrl, data)
-    //     .then(response => console.log("API Gateway response:", response.data))
-    //     .catch(error => console.error("Error calling API Gateway:", error));
-    // }
   } catch (error) {
     console.error("Error creating user:", error);
     res.status(500).json({ error: "Internal server error" });
