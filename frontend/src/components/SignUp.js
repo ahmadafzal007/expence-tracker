@@ -80,7 +80,7 @@ export default function SignUp() {
       toast.success('User registered successfully!');
 
       // Navigate to sign-in page using history
-      history.push('/');
+      history.push('/signin');
     } catch (error) {
       console.error('Error:', error);
       // Show error toast message
